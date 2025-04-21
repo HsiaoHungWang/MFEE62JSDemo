@@ -5,15 +5,47 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
  
-  <style></style>
+  <style>
+    h1:nth-child(2){
+      color:blue;
+    }
+     #div1,#div2{
+      width:300px;
+      height:100px;
+      background-color: silver;
+     } 
+     
+     .s1{
 
+     }
+
+  </style>
+  
+  
 </head>
 <body>
-  
+  <h1>First Practice1</h1>
+  <h1>First Practice2</h1>
+  <h1>First Practice3</h1>
+  <div id="div1"></div>
+  <div id="div2"></div>
 
   <script>
-    window.alert('Hello!')    
+    // 'use strict'
+    // let message = 'Hello!'
+    // window.alert(message);  
+    // console.log(message);
+    // document.write(message);
+    //步驟一找到你要控制的標籤
+    const myDiv1 =  document.getElementById('div1');  
+    const myDiv2 =  document.getElementById('div2');   
+    // document.querySelector('css selectors')
+    // document.querySelector('#div1')
+    // document.querySelector('h1:nth-child(2)')
+    //步驟二要對這個標籤做甚麼事
+    //加入一段文字 innerHTML、textContent 屬性
+    myDiv1.textContent = "<h3>Hello JavaScript!!</h3>";
+    myDiv2.innerHTML = "<h3>Hello JavaScript!!</h3>";
   </script>
-  <script src="scripts/hello.js"></script>
 </body>
 </html>
