@@ -26,6 +26,37 @@
 
     //先轉成整數，運算完再轉成小數
     // console.log(((0.2 * 10) * 3)/10);  //0.6
+
+    //比較運算子 ASCII  Big5  Unicode
+    // console.log(10 == "10");  //true
+    // console.log(10 === "10"); //false
+    // console.log("a" > "b"); //false 
+    // // console.log("a".charCodeAt()); //97
+    // // console.log("b".charCodeAt()); //98
+    // console.log("a" > "5") //true
+    // // console.log("5".charCodeAt()); //53
+    // console.log("a" > 5) //”a”強制轉換為 NaN=>false
+    // console.log(undefined == null) //true
+    // console.log(undefined === null) //fales
+    // console.log("a" > "A");  //true
+    // console.log("A".charCodeAt()); //65
+
+    // =    指定
+    // ==   比較
+    // ===  嚴格比較(v)
+
+    //邏輯運算子
+    //console.log(!(2>1))
+    console.log(true && true); //true
+    console.log(false && true); //fale
+    console.log(!!NaN); //false
+
+    let 有錢 = true;
+    let 夠帥 = false;
+
+    // console.log(有錢 && 夠帥)
+    console.log(有錢 || 夠帥)
+
   </script>
 </body>
 </html>
