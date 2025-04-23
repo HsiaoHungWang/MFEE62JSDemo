@@ -74,6 +74,7 @@
     console.log(user.name); //Tom
     console.log(user["age"]); //30
 
+    //JSON   、XML、CSV
     const users = [
       {"name":"Tom","age":30,"email":"Tom@gmail.com"},
       {"name":"Jack","age":28,"email":"Jack@gmail.com"},
@@ -81,8 +82,17 @@
     ];
     //Jack
     //Mary => 38
-    console.log(users[1]); //???
+    // const _user = users[1];
+    // console.log(_user); // {"name":"Jack","age":28,"email":"Jack@gmail.com"}
+    // console.log(_user.name);
+    // const userMary = users[2];
+    // console.log(userMary.age);
 
+    const jsonData ={"users":[
+      {"name":"Tom","age":30,"email":"Tom@gmail.com"},
+      {"name":"Jack","age":28,"email":"Jack@gmail.com"},
+      {"name":"Mary","age":38,"email":"Mary@gmail.com"}
+    ]};
 
 
    
