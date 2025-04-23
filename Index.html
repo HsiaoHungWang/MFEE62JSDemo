@@ -31,7 +31,7 @@
   <h1>First Practice3</h1>
   <div id="div1"></div>
   <div id="div2"></div>
-
+  <script src="scripts/hello.js"></script>
   <script>
     //輸入 prompt
    // const data = window.prompt('請輸入姓名', 'guest');
@@ -41,23 +41,24 @@
     // console.log(message);
     // document.write(message);
     //步驟一找到你要控制的標籤
-    const myDiv1 =  document.getElementById('div1');  
+    const myDiv1 =  document.getElementById('div1');     
     const myDiv2 =  document.getElementById('div2');   
     const txt = document.getElementById('text1');
     const spn = document.getElementById('span1');
+
 
     // document.querySelector('css selectors')
     // document.querySelector('#div1')
     // document.querySelector('h1:nth-child(2)')
     //步驟二要對這個標籤做甚麼事
     //加入一段文字 innerHTML、textContent 屬性
-    myDiv1.textContent = "<h3>Hello JavaScript!!</h3>"; // data; 
-    myDiv2.innerHTML = "<h3>Hello JavaScript!!</h3>";
+    myDiv1.textContent = '<h3>Hello JavaScript!!</h3>'; // data; 
+    myDiv2.innerHTML = '<h3>Hello JavaScript!!</h3>';
 
     //input事件 表示使用者在文字框中輸入的行為
     //input事件發生會去執行function裡面的程式
     txt.addEventListener('input', function(){
-      spn.textContent =  txt.value //讀出輸入在文字框中的字
+      spn.textContent =  txt.value; //讀出輸入在文字框中的字
     })
   </script>
 </body>
