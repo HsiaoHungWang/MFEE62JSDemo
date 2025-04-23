@@ -135,7 +135,7 @@
      let y = null;
     console.log(typeof z);
     //明確的型別轉換 Number()、String() 、Boolean() true、false
-    
+
     //0、""、undefined、null 透過Boolean轉型會變成 false
 
     // // z = String(z);
@@ -157,10 +157,19 @@
     //!!x // ??=>Boolean
     //console.log(`z:${!z}`);  //z=0 => !fales => true
     //!!
-    console.log(`z:${!!z}`);  //z=0 => !!fales => false
+    // console.log(`z:${!!z}`);  //z=0 => !!fales => false
     // console.log(typeof z);
     // console.log(typeof x);
     // console.log(z);
+
+    console.log(parseInt("10",10));      // 10
+console.log(parseInt("1A",10));        //1
+console.log(parseInt("1A",16));      //0-9-ABCDE 1=>16 + A=>10 =>26
+console.log(parseInt("15.6",10));    //15
+console.log(parseInt("A1",10));      //NaN
+console.log(parseFloat("12.12a34")); //12.12
+console.log(parseFloat("a12.12a34")); //NaN
+
 
 
 
