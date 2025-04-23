@@ -124,11 +124,45 @@
     console.log(typeof a);//boolean
 
 
-    const x = Number(window.prompt("請輸入數字x：", 10));
-    const y = Number(window.prompt("請輸入數字y：", 10));
-    console.log(typeof x)
-    console.log(typeof y)
-    console.log(x + y);  //1010、20
+    // const x = Number(window.prompt("請輸入數字x：", 10));
+    // const y = Number(window.prompt("請輸入數字y：", 10));
+    // console.log(typeof x)
+    // console.log(typeof y)
+    // console.log(x + y);  //1010、20
+
+     let z = 0;
+     let x = "";
+     let y = null;
+    console.log(typeof z);
+    //明確的型別轉換 Number()、String() 、Boolean() true、false
+    
+    //0、""、undefined、null 透過Boolean轉型會變成 false
+
+    // // z = String(z);
+    // //z = z.toString();
+    // //x = Number(x);
+    // z = Boolean(z)
+    // x = Boolean(x)
+    // console.log(typeof z);
+    // console.log(`z: ${z}`);
+    // console.log(typeof x);
+    // console.log(`x: ${x}`);
+    // console.log(`y:${Boolean(y)}`);
+
+
+    // //隱含型別轉換 
+    // z = z+""; //Number => String
+    // x = +x;  //String => Number
+    //! => not  !true=>false !false=>true
+    //!!x // ??=>Boolean
+    //console.log(`z:${!z}`);  //z=0 => !fales => true
+    //!!
+    console.log(`z:${!!z}`);  //z=0 => !!fales => false
+    // console.log(typeof z);
+    // console.log(typeof x);
+    // console.log(z);
+
+
 
    
   </script>
