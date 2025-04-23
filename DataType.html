@@ -33,12 +33,12 @@
     //void 代表沒有回傳值 => undefined
 
 
-    const _name = 'Tom';
-    const age = 20;
-    console.log('Hello _name，你 age 歲了');
-    console.log('Hello ' +  _name + '，你 ' + age + ' 歲了');
-    //Template literals 
-    console.log(`Hello ${_name}，你 ${age} 歲了`);
+    // const _name = 'Tom';
+    // const age = 20;
+    // console.log('Hello _name，你 age 歲了');
+    // console.log('Hello ' +  _name + '，你 ' + age + ' 歲了');
+    // //Template literals 
+    // console.log(`Hello ${_name}，你 ${age} 歲了`);
 
     //跳脫序列(escape sequence)
     console.log('C:\Users\User\Downloads\cat.jpg');  //C:UsersUserDownloadscat.jpg
@@ -90,10 +90,23 @@
 
     const jsonData ={"users":[
       {"name":"Tom","age":30,"email":"Tom@gmail.com"},
-      {"name":"Jack","age":28,"email":"Jack@gmail.com"},
+      {"name":"Jack","age":28,"email":"Jack@gmail.com","phone":["0911222333","(02)66316666"]},
       {"name":"Mary","age":38,"email":"Mary@gmail.com"}
     ]};
 
+    //jsonData => {} 物件.屬性
+    // const _users = jsonData.users; //[] 陣列[index]
+    // const _user = _users[1]; // {"name":"Jack","age":28,"email":"Jack@gmail.com"}
+    // console.log(_user.name); // Jack
+    // console.log(_user.phone[0]); // 0911222333
+
+    //解構賦值(Destructuring assignment)
+    const {name, age, email, phone} = jsonData.users[1];
+    console.log(name)
+    console.log(age)
+    console.log(email)
+    console.log(phone[0])
+    console.log(phone[1])
 
    
   </script>
