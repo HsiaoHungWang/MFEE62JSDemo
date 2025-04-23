@@ -47,15 +47,56 @@
 
     //邏輯運算子
     //console.log(!(2>1))
-    console.log(true && true); //true
-    console.log(false && true); //fale
-    console.log(!!NaN); //false
+    // console.log(true && true); //true
+    // console.log(false && true); //fale
+    // console.log(!!NaN); //false
 
-    let 有錢 = true;
-    let 夠帥 = false;
+    // let 有錢 = true;
+    // let 夠帥 = false;
 
-    // console.log(有錢 && 夠帥)
-    console.log(有錢 || 夠帥)
+    // // console.log(有錢 && 夠帥)
+    // console.log(有錢 || 夠帥)
+
+    //捷徑(短路)運算
+    //利用 &&　|| 避免多餘運算
+    // false && 完全不會執行
+
+    // || OR 邏輯運算子，
+
+    // let name = "Tom";
+    // //if(name === ""){
+    // if(!name){
+    //   name = "guest" //預設值
+    // }
+    // console.log(name);
+
+    //|| => 設定預設值
+    let name = "";    
+    name = name || "Guest";  //name => fales
+    //name 為 false，就會執行 "Guest" 指定給 name
+    //name 為 true，程式就停止了
+    console.log(name);
+
+    // && 
+    let isValid  = false;
+    isValid && console.log("驗證成功");
+
+    const jsonData ={"users":[
+      {"name":"Tom","age":30,"email":"Tom@gmail.com","address":{"city":"Taipei","road":"復興南路一段390號"}},
+      {"name":"Jack","age":28,"email":"Jack@gmail.com","phone":["0911222333","(02)66316666"],"address":{"road":"復興南路一段390號"}},
+      {"name":"Mary","age":38,"email":"Mary@gmail.com"}
+    ]};
+// &&  jsonData.users[0].address 為 true 才會去執行 && 後面的程式
+//jsonData.users[0].address 為 false 不會去執行 && 後面的程式
+//避免錯誤
+    console.log(jsonData.users[0].address && jsonData.users[0].address.city);
+    console.log(jsonData.users[2].address && jsonData.users[2].address.city);//Taipei
+
+    const address = jsonData.users[2].address; //jsonData.users[0].address;
+   if(address){
+    console.log(address.city);
+   }
+
 
   </script>
 </body>
