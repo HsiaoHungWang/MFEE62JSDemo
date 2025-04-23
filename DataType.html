@@ -4,8 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <style>
+    span{
+      margin-right: 20px;
+    }
+  </style>
 </head>
 <body>
+ xxxxxxxx      
+ yyyyyyy
+       
+ 
+  <hr />
+
   <script>
     //變數宣告沒有給初始值，這個變數的值就是undefined
     let data;
@@ -28,6 +39,21 @@
     console.log('Hello ' +  _name + '，你 ' + age + ' 歲了');
     //Template literals 
     console.log(`Hello ${_name}，你 ${age} 歲了`);
+
+    //跳脫序列(escape sequence)
+    console.log('C:\Users\User\Downloads\cat.jpg');  //C:UsersUserDownloadscat.jpg
+    console.log('C:\\Users\\User\\Downloads\\cat.jpg');  //C:\Users\User\Downloads\cat.jpg
+   // console.log('Mary's 店');  //Uncaught SyntaxError: missing ) after argument list (at DataType.html:35:17)
+   // console.log("Mary's 店");  //Mary's 店
+   console.log('Mary\'s 店');  //Mary's 店
+   console.log('aaaa\nbbbb');   //\n換行
+   console.log('aaaa\tbbbb');   //\t =>tab鍵
+   console.log('abc\bxyz');    //\b =>backspace鍵
+   document.write('aaaa\nbbbb');
+   document.write('aaaa\tbbbb');
+   document.write('abc\bxyz');  
+
+
 
     // //陣列 [value,value,value]
     //  const b1 = 'basketball';
