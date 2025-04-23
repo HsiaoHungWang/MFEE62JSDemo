@@ -45,22 +45,24 @@
     console.log('C:\\Users\\User\\Downloads\\cat.jpg');  //C:\Users\User\Downloads\cat.jpg
    // console.log('Mary's 店');  //Uncaught SyntaxError: missing ) after argument list (at DataType.html:35:17)
    // console.log("Mary's 店");  //Mary's 店
-   console.log('Mary\'s 店');  //Mary's 店
-   console.log('aaaa\nbbbb');   //\n換行
-   console.log('aaaa\tbbbb');   //\t =>tab鍵
-   console.log('abc\bxyz');    //\b =>backspace鍵
-   document.write('aaaa\nbbbb');
-   document.write('aaaa\tbbbb');
-   document.write('abc\bxyz');  
+  //  console.log('Mary\'s 店');  //Mary's 店
+  //  console.log('aaaa\nbbbb');   //\n換行
+  //  console.log('aaaa\tbbbb');   //\t =>tab鍵
+  //  console.log("abc\bxyz");    //\b =>backspace鍵
+  //  document.write('aaaa\nbbbb');
+  //  document.write('aaaa\tbbbb');
+  //  document.write("abc\bxyz");  
 
 
 
     // //陣列 [value,value,value]
-    //  const b1 = 'basketball';
+     const b1 = 'basketball';
     //  const b11 = b1;
-    // // const b2 = 'baseball';
-    // // const b3 = 'valleyball';
-    // const balls = ['basketball','baseball','valleyball'];
+    const b2 = 'baseball';
+    const b3 = 'valleyball';
+    console.log(b1);
+    const balls = ['basketball','baseball','valleyball'];
+    console.log(balls[0]); //basketball
     // const balls1 = balls;
 
     //物件{key:value,key:value}
@@ -69,6 +71,18 @@
     // const email ='Tom@gmail.com';
 
     const user = {"name":"Tom","age":30,"email":"Tom@gmail.com"};
+    console.log(user.name); //Tom
+    console.log(user["age"]); //30
+
+    const users = [
+      {"name":"Tom","age":30,"email":"Tom@gmail.com"},
+      {"name":"Jack","age":28,"email":"Jack@gmail.com"},
+      {"name":"Mary","age":38,"email":"Mary@gmail.com"}
+    ];
+    //Jack
+    //Mary => 38
+    console.log(users[1]); //???
+
 
 
    
