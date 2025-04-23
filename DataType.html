@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //變數宣告沒有給初始值，這個變數的值就是undefined
+    let data;
+    console.log(data);  //undefined
+   // console.log(data1) // Uncaught ReferenceError: data1 is not defined
+
+    let item = null;
+    console.log(item);
+
+    //window.prompt() //會得到string | null
+    function abc(){
+
+    }
+    //void 代表沒有回傳值 => undefined
+
+
+    const _name = 'Tom';
+    const age = 20;
+    console.log('Hello _name，你 age 歲了');
+    console.log('Hello ' +  _name + '，你 ' + age + ' 歲了');
+    //Template literals 
+    console.log(`Hello ${_name}，你 ${age} 歲了`);
+
+    // //陣列 [value,value,value]
+    //  const b1 = 'basketball';
+    //  const b11 = b1;
+    // // const b2 = 'baseball';
+    // // const b3 = 'valleyball';
+    // const balls = ['basketball','baseball','valleyball'];
+    // const balls1 = balls;
+
+    //物件{key:value,key:value}
+    // const _name = 'Tom';
+    // const age = 30;
+    // const email ='Tom@gmail.com';
+
+    const user = {"name":"Tom","age":30,"email":"Tom@gmail.com"};
+
+
+   
+  </script>
+</body>
+</html>
