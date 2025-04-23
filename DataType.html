@@ -108,6 +108,28 @@
     console.log(phone[0])
     console.log(phone[1])
 
+    //typeof
+    let a;
+    console.log(a);  //undefined
+    console.log(typeof a);//undefined
+    a = null;
+    console.log(typeof a);//object
+    a = 12;
+    console.log(typeof a);//number
+    a = "12";
+    console.log(typeof a);//string
+    a = [];
+    console.log(typeof a);//object
+    a = true;    
+    console.log(typeof a);//boolean
+
+
+    const x = Number(window.prompt("請輸入數字x：", 10));
+    const y = Number(window.prompt("請輸入數字y：", 10));
+    console.log(typeof x)
+    console.log(typeof y)
+    console.log(x + y);  //1010、20
+
    
   </script>
 </body>
