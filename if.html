@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>選擇結構</title>
+</head>
+<body>
+  
+
+  <script>
+    const weight = 50; //公斤
+    let height = 170; //公分
+    height = 170/100; //公尺
+    const bmi = weight/(height * height);
+
+
+    console.log(`BMI = ${bmi}`);
+    let result = '';
+
+    if(bmi < 18.5){
+      result = '過輕';
+    }else if(bmi >= 18.5 && bmi < 24){
+      result = '正常';
+    }else if(bmi >= 24 && bmi < 27){
+      result = '過重';
+    }else{
+      result = '重度肥胖';
+    }
+
+    console.log(`您的體重 ${result}`)
+
+
+  
+    // if(條件式=>true or false){
+         //如果條件為True時
+         //會執行這裡的程式碼
+    // }else{
+        //否則執行這裡的程式
+    //}
+    // const isValid = false;
+    // if(isValid){
+
+    // }
+    //Class Object
+    //console.log(new Date());
+    // console.log(new Date().getHours());
+    // console.log(new Date().getMinutes());    
+    // console.log(new Date().getMonth()+1); //0-11
+    
+   // console.log(new Date().getDay()); //4 -> 四
+    //let hour = new Date().getHours();
+  //  hour = 13;
+  //   if(hour <= 12){
+  //     console.log("早場票價：250");
+  //   }else{
+  //     console.log("票價：350");
+  //   }
+
+    // let price = 350;
+    // if(hour <= 12){
+    //   price = 250;
+    //   //console.log("早場票價：250");
+    // }
+
+    // console.log(`票價：${price}`);
+    
+
+    let _day = new Date().getDay(); //0日-6六  //4
+   // _day = 5
+    let day = '';
+
+    // if(_day === 4){
+    //   day = "四"
+    // }else if(_day === 5){
+    //   day = "五"
+    // }
+
+    switch(_day){
+       case 0:
+        day = '日';
+        break;
+      case 1:
+        day = '一';
+        break;
+      case 2:
+        day = '二';
+        break;
+      case 3:
+        day = '三';
+        break;
+      case 4:
+        day = '四';
+        break;
+      case 5:
+        day = '五';
+        break;
+      case 6:
+        day = '六';
+        break;
+      default:
+        day = "不知";
+        break;
+
+    }
+
+    console.log(`今天是星期${day}`)
+
+
+  </script>
+</body>
+</html>
