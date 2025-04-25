@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loop</title>
+</head>
+<body>
+  
+  <script>
+    // console.log("I Love JavaScript!!");
+    // console.log("I Love JavaScript!!");
+    // console.log("I Love JavaScript!!");
+    // console.log("I Love JavaScript!!");
+    // for(let i=0; i<5 ;i++){
+    //   console.log("I Love JavaScript!!", i);
+    // }
+
+    //1+2+....+99+100=??
+
+    //for
+    //  let total = 0;
+     //for(初值設定;條件式;更新初值)
+    // for(let i=1; i<=100; i++){
+    //    //total = total + i;
+    //    total += i;
+    // }
+
+    //while
+    //初值設定
+    // let i = 1;
+    // //while(條件式)
+    // while(i<=100){
+    //   total += i;
+    //   //更新初值
+    //   i++;
+    // }
+
+    //do..while
+    // do{
+    //   total += i;
+    //   //更新初值
+    //   i++;
+    // }while(i<=100);
+
+    // console.log(`1+2+....+99+100=${total}`);
+
+    //break continue
+  // for(let i=5; i > 0; i--){
+  //   if(i===3){
+  //     // continue;  //5、4、2、1 //略過這一次的執行，執行下一次的迴圈
+  //     break; //5、4  離開迴圈
+  //   }
+  //   console.log(i);
+  // }
+
+  let text = "";
+  while(true){
+    text = window.prompt("輸入quit離開：")
+    if(text === 'quit'){
+      break;
+    }
+    console.log(text);
+  }
+
+  // do{
+  //   text = window.prompt("輸入quit離開：")  
+  //   console.log(text);
+  // }while(text!=='quit');
+
+
+   
+  </script>
+</body>
+</html>

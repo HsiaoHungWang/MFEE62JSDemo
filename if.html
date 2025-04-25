@@ -9,6 +9,20 @@
   
 
   <script>
+ //Number("12")、parseInt("12")
+  const num1 = window.prompt("請輸入數字", 0);
+  const num2 = window.prompt("請輸入數字", 0);
+  let bigNum = 0;
+  if(+num1 > +num2){
+    bigNum = num1;
+  }else{
+     bigNum = num2;
+  }
+  console.log(bigNum);
+
+  
+
+
     const weight = 50; //公斤
     let height = 170; //公分
     height = 170/100; //公尺
