@@ -71,13 +71,36 @@
   //日期物件 ： new Date()
   //電腦產生數字 => 亂數
   //數學物件：Math
-  let num = Math.random(); //回傳 0-1 之間的值，列如：0.5764369838406289、0.9148514932572119、0.013424345
-  num = num * 100;
-  console.log(num);  //77.64333348542264、9.003674362256964
-  //無條件捨去 Math.floor()
-  console.log(Math.floor(num)); //83、74、14
+  // let num = Math.random(); //回傳 0-1 之間的值，列如：0.5764369838406289、0.9148514932572119、0.013424345
+  // num = num * 100;
+  // console.log(num);  //77.64333348542264、9.003674362256964
+  // //無條件捨去 Math.floor()
+  // console.log(Math.floor(num)); //83、74、14
 
+  const balls = ['basketball','baseball','valleyball'];
+  //console.log(balls.length); //length屬性：取得陣列長度(裡面有多少筆資料)
+  // console.log(balls[1]); //baseball
+  //max = 3
 
+  // for(let i=0, max=balls.length ; i<max ; i++){
+  //   console.log(balls[i])
+  // }
+
+  // for(let i in balls){
+  //   //i 這個變數會是陣列的索引值
+  //   console.log(balls[i])
+  // }
+
+  for(let ball of balls){
+    //ball 這個變數就是陣列中的Value
+    console.log(ball);
+    //判斷 break continue
+  }
+
+  //陣列是一個物件，有很多方法
+  balls.forEach(ball=>{
+    console.log(ball)
+  })
 
 
    
