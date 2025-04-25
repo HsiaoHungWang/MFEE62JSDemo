@@ -10,12 +10,33 @@
 
   <script src="scripts/hello.js"></script>
   <script>
-    const data1 = sayHi('Jack');
-    const data2 = sayHi('Mary');
-    const data3 = sayHi();
-    console.log(data1);
-    alert(data2);
-    console.log(data3);
+      
+    const data1 = sayHi('Jack', 'Wu');
+    // const data2 = sayHi('Mary');
+    // const data3 = sayHi();
+     console.log(data1);
+    // alert(data2);
+    // console.log(data3);
+   // console.log(data1);  //ReferenceError data1 is not defined
+  //  console.log(data); //undefined
+
+ //const data2 =  getSum(); //5 
+//  const data2 =  getSum(10); //13
+//  const data2 =  getSum(10,20); //30
+//  console.log(data2);
+console.log(getSum());
+console.log(getSum(10));
+console.log(getSum(10,20));
+console.log(getSum(10,20,30,40,50));
+
+
+
+
+//var data = "abc";
+
+    const degree = tempatureConverter(32,'F');
+    console.log(degree);
   </script>
+
 </body>
 </html>
