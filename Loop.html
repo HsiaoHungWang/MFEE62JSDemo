@@ -91,16 +91,63 @@
   //   console.log(balls[i])
   // }
 
-  for(let ball of balls){
-    //ball 這個變數就是陣列中的Value
-    console.log(ball);
-    //判斷 break continue
+  // for(let ball of balls){
+  //   //ball 這個變數就是陣列中的Value
+  //   console.log(ball);
+  //   //判斷 break continue
+  // }
+
+  // //陣列是一個物件，有很多方法
+  // balls.forEach(ball=>{
+  //   console.log(ball)
+  // })
+
+  const users = [
+      {"name":"Tom","age":30,"email":"Tom@gmail.com"},
+      {"name":"Jack","age":28,"email":"Jack@gmail.com"},
+      {"name":"Mary","age":38,"email":"Mary@gmail.com"}
+  ];
+  for(let user of users){
+    const {name, age, email} = user;  // {"name":"Tom","age":30,"email":"Tom@gmail.com"}
+    //  console.log(user.name);
+    //  console.log(user.age);
+    //  console.log(user.email);
+    console.log(name);
+    console.log(age);
+    console.log(email);
   }
 
-  //陣列是一個物件，有很多方法
-  balls.forEach(ball=>{
-    console.log(ball)
-  })
+  // const jsonData ={"users":[
+  //     {"name":"Tom","age":30,"email":"Tom@gmail.com"},
+  //     {"name":"Jack","age":28,"email":"Jack@gmail.com","phone":["0911222333","(02)66316666"]},
+  //     {"name":"Mary","age":38,"email":"Mary@gmail.com"}
+  //   ]};
+
+
+  // //for..of、Array.forEach()
+
+  // for(let user of jsonData.users){
+  //   console.log(user.name);
+  //    console.log(user.age);
+  //    console.log(user.email);
+  // }
+
+
+  // const user =  {"name":"Tom","age":30,"email":"Tom@gmail.com"};
+  //讀取物件中的資料
+  // console.log(user.name); //Tom 常值
+  // console.log(user["name"]);//Tom
+
+  // for(var k in user){
+  //   //k 這個變數會是物件的key{key:value,key:value}
+  //   if(k === "name"){
+  //     console.log(user[k]);
+  //   }
+  //   // console.log(k);  //name、age、email
+       
+  // }
+  
+
 
 
    
