@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!--
+  var  vs    let、const
+  1. var 可以重複宣告，let、const 不能重複宣告
+  2. var 變數提升(hoisting)的現象，let、const => temporal dead zone
+  temporal dead zone 暫時性的死區：變數提升因為還沒給值所以不能使用
+  3. 變數有效範圍不同，var 函式式作用域，let、const 區塊作用域{ .... }
+  -->
+
+  <script>
+   //廣域變數
+  //  var x = "xxx";
+  //  let y = "yyy";
+  //  const z = "zzzz";
+  //變數宣告在function內是區域變數
+   function a(){
+      let isLogin = true;
+      if(isLogin){
+        var x = "xxxx";
+        let y = "yyy";
+      }
+
+      console.log(x);
+      console.log(y); //Uncaught ReferenceError: y is not defined
+   }
+
+  //  function b(){
+  //     console.log(x)
+  //     console.log(y)
+  //     console.log(z)
+  //  }
+
+   a();
+  //  b();
+
+  </script>
+</body>
+</html>
