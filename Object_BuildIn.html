@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input type="text" />
+
+  <script>
+    // console.log('1+2');        //1+2
+    // console.log(1+2);          //3
+    // console.log(eval('1+2'));  //3
+
+    //NaN  Not a Number
+    //console.log(Number("abc"));   //NaN
+    //isNaN   is not a number
+    // console.log(isNaN("abc"));  //true
+    // console.log(isNaN("123"));  //false
+
+    const strUrl = "https://www.ispan.com.tw/?search=前端&type=engineer";
+    //編碼
+    console.log(encodeURI(strUrl));
+    console.log(encodeURIComponent(strUrl));
+    const encodedStrRul = "https%3A%2F%2Fwww.ispan.com.tw%2F%3Fsearch%3D%E5%89%8D%E7%AB%AF%26type%3Dengineer"
+    console.log(decodeURIComponent(encodedStrRul));
+  </script>
+</body>
+</html>
