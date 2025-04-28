@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <select id="select1">
+    <option value="1">Item1</option>
+    <option value="2">Item2</option>
+    <option value="3">Item3</option>
+  </select>
+
+  <script>
+    const mySelect = document.querySelector('#select1');
+    mySelect.addEventListener('change', event =>{
+      //事件處理函式的第一個參數就是事件物件，例如event就是一個事件物件
+       console.log(event); //事件物件有哪些屬性
+       console.log(event.target); //事件對象 <select>
+       console.log(event.type);  //事件類型  change
+       console.log(event.target.value); //讀取被選取的value的值
+    })
+
+  </script>
+</body>
+</html>
