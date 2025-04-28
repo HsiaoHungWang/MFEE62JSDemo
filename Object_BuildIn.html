@@ -6,9 +6,28 @@
   <title>Document</title>
 </head>
 <body>
-  <input type="text" />
+  <input id="text1" type="text" placeholder="輸入電子郵件" />
+  <button id="button1">click</button>
+  <div id="div1"></div>
 
   <script>
+    //找到要控制的對象 querySelector('css selectors')
+    const txt = document.querySelector('#text1');
+    const btn = document.getElementById('button1');
+    const divMessage = document.querySelector('#div1');
+
+    //甚麼時候 > 做甚麼事
+    //使用者按下按鈕的時候 => click 事件
+    btn.addEventListener('click',()=>{
+      //做甚麼事 驗證電子郵件格式是否正確  @@、@ => 0  @wang.ispn.com.tw @ => 最後位置
+      //email 中有沒有 @  indexOf('@') => -1
+      //email 中有沒有 .  indexOf('.') => -1
+
+      divMessage.textContent =`${txt.value} email 格式正確或錯誤` ;
+
+    })
+
+
     // console.log('1+2');        //1+2
     // console.log(1+2);          //3
     // console.log(eval('1+2'));  //3
@@ -19,12 +38,31 @@
     // console.log(isNaN("abc"));  //true
     // console.log(isNaN("123"));  //false
 
-    const strUrl = "https://www.ispan.com.tw/?search=前端&type=engineer";
-    //編碼
-    console.log(encodeURI(strUrl));
-    console.log(encodeURIComponent(strUrl));
-    const encodedStrRul = "https%3A%2F%2Fwww.ispan.com.tw%2F%3Fsearch%3D%E5%89%8D%E7%AB%AF%26type%3Dengineer"
-    console.log(decodeURIComponent(encodedStrRul));
+    // const strUrl = "https://www.ispan.com.tw/?search=前端&type=engineer";
+    // //編碼
+    // console.log(encodeURI(strUrl));
+    // console.log(encodeURIComponent(strUrl));
+    // const encodedStrRul = "https%3A%2F%2Fwww.ispan.com.tw%2F%3Fsearch%3D%E5%89%8D%E7%AB%AF%26type%3Dengineer"
+    // console.log(decodeURIComponent(encodedStrRul));
+
+    //String Object    new Class() => Object
+    //const str = new String('JavaScript');
+    //JavaScript
+    //0123456789
+    const str = 'JavaScript';
+   console.log(`str： ${str}`);
+    console.log(`JavaScript字元數： ${str.length}`);  //10
+    console.log(`charAt(4)： ${str.charAt(4)}`);  //S
+    console.log(`indexOf("a")： ${str.indexOf('a')}`);  //1
+    console.log(`indexOf("z")： ${str.indexOf('z')}`);  //找不到回傳-1
+    console.log(`lastIndexOf("a")： ${str.lastIndexOf('a')}`);  //3
+    console.log(`substr(4,6)： ${str.substr(4,6)}`);  //Script
+    console.log(`substring(4,6)： ${str.substring(4,6)}`);  //Sc
+    console.log(`substring(4,10)： ${str.substring(4,10)}`);  //Script
+    // console.log("a" === "A"); //true or false => false
+    // console.log("a".charCodeAt()); //97
+    // console.log("A".charCodeAt()); //65
+    // console.log("a".toLowerCase() === "A".toLowerCase()); //true
   </script>
 </body>
 </html>
