@@ -129,7 +129,12 @@
     // console.log(re.test('0811-122-233')); //false
     // console.log(re.test('0811-122-23a')); //false
 
-    //a123456789 身分證號碼的檢查
+    //a123456789 身分證號碼的檢查 [1-2]
+    const re = /^[a-z](1|2)\d{8}$/;
+    console.log(re.test('a123456789')); //true
+    console.log(re.test('a323456789')); //false
+    console.log(re.test('1223456789')); //false
+    console.log(re.test('a1234567890')); //false
 
 
 
