@@ -9,6 +9,7 @@
   <input id="text1" type="text" placeholder="輸入電子郵件" />
   <button id="button1">click</button>
   <div id="div1"></div>
+  <ul id="ul1"></ul>
 
   <script src="scripts//vaidate.js"></script>
   <script>
@@ -16,6 +17,8 @@
     const txt = document.querySelector('#text1');
     const btn = document.getElementById('button1');
     const divMessage = document.querySelector('#div1');
+    const myUl = document.querySelector('#ul1');
+
 
     //甚麼時候 > 做甚麼事
     //使用者按下按鈕的時候 => click 事件
@@ -130,12 +133,70 @@
     // console.log(re.test('0811-122-23a')); //false
 
     //a123456789 身分證號碼的檢查 [1-2]
-    const re = /^[a-z](1|2)\d{8}$/;
-    console.log(re.test('a123456789')); //true
-    console.log(re.test('a323456789')); //false
-    console.log(re.test('1223456789')); //false
-    console.log(re.test('a1234567890')); //false
+    // const re = /^[a-z](1|2)\d{8}$/;
+    // console.log(re.test('a123456789')); //true
+    // console.log(re.test('a323456789')); //false
+    // console.log(re.test('1223456789')); //false
+    // console.log(re.test('a1234567890')); //false
 
+
+    const arr1 = ["d","b","c","a","e"];
+    const arr2 = ["x","y","z"];
+    // console.log(arr1);
+    // delete arr1[2];
+    
+    // console.log(arr1);
+    // arr1[2] = "x";
+
+    //string > array  str.split(" ")
+   // console.log(arr1.join("-")); //array > string
+    //console.log(arr1.toString()); //a,b,c,d,e
+    // console.log(arr1.reverse()); /反轉
+  //  console.log(arr1.sort()); //排序
+  
+  // arr1.push("f");  //f 會加到陣列的後面
+  // console.log(arr1);
+  // arr1.pop();      //移除陣列的最後一筆資料
+  // console.log(arr1);
+
+  // arr1.unshift("f");//f 會加到陣列的前面
+  // console.log(arr1);
+  // arr1.shift();    //移除陣列的第一筆資料
+  // console.log(arr1);
+
+  // console.log(arr1.indexOf("x"));  //找不到回傳-1  
+  // console.log(arr1.indexOf("c"));  //找到回傳陣列中的index 2
+
+  // console.log(arr1.slice(0,2)); //["d","b"];
+  // const arr3 = arr1.concat(arr2);
+  // console.log(arr1);
+  // console.log(arr2);
+  // console.log(arr3);
+ //const x = arr1.splice(2,1,"x");  //修改
+//  arr1.splice()
+//  const x = arr1.splice(2,1,"x","y","z");  //修改
+//  console.log(x);
+//  console.log(arr1);
+
+  // arr1.forEach(item=>{
+  //   console.log(item);
+  // })
+
+  // let datas = arr1.filter((item, index)=>{
+  //   if(index % 2 !== 0){
+  //     return item;
+  //   }   
+  // });
+  // console.log(arr1);
+  // console.log(datas);
+
+  const datas = arr1.map(item=>{
+    return `<li>${item}</li>`;
+  })
+  console.log(arr1);
+  console.log(datas);
+  myUl.innerHTML = datas.join("");  //array > string
+  
 
 
   </script>
