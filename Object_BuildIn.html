@@ -78,19 +78,59 @@
     // console.log("A".charCodeAt()); //65
     // console.log("a".toLowerCase() === "A".toLowerCase()); //true
 
+    // const str = "write less do more";
+    // const datas = str.split(","); //字串轉陣列
+    // console.log(datas);
+
+    const strFileName = "a.pdf";
+    const ext = strFileName.split(".")[1];
+    if(/png|jpg|gif/.test(ext)){
+      console.log('圖檔');
+    }else{
+      console.log('不是圖檔');
+    }
+
+    // if(strFileName.split(".")[1]==="jpg"){
+    //   console.log("副檔名是 jpg");
+    // }
+
     //Date Object
-    const today = new Date();
-    console.log(today);
-    console.log(today.getTime()); //回傳毫秒
-    console.log(today.getMonth() + 1); //0-11 => 0 就是一月
+    // const today = new Date();
+    // console.log(today);
+    // console.log(today.getTime()); //回傳毫秒
+    // console.log(today.getMonth() + 1); //0-11 => 0 就是一月
     
-    console.log(today.getDay());  //0-6 => 0 星期日，1 星期一
+    // console.log(today.getDay());  //0-6 => 0 星期日，1 星期一
 
 
     //輸入生日，計算年紀
     //(今天毫秒-生日毫秒) / 365.2425 * 24 * 60 * 60 * 1000 一年多少毫秒
     // const birthDay = new Date('2000/10/10');
     // console.log(birthDay);
+
+    //RegExp Object 正規(則)表達式 new RegExp('pattern','gi')
+    //const re = new RegExp("a","gi");
+    //[] {} /pattern/flag
+    //const re = /a/gi;
+    //學會如何設計我們的 pattern
+
+    // //透過String.match()使用 RegExp
+    // const str =  "JavaScript JAVA";
+    // const data = str.match(re);
+    // console.log(data);
+
+    //透過 re.test()方法用來檢查傳入字串有沒有符合 RegExp 的 pattern
+    //console.log(re.test("A"));
+
+    //0911-222-333
+    // const re = /^09\d{2}-\d{3}-\d{3}$/;
+    // console.log(re.test('0911122233')); //fales
+    // console.log(re.test('0911-122-233')); //true
+    // console.log(re.test('0811-122-233')); //false
+    // console.log(re.test('0811-122-23a')); //false
+
+    //a123456789 身分證號碼的檢查
+
 
 
   </script>
