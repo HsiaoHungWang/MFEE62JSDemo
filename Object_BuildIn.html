@@ -190,13 +190,42 @@
   // console.log(arr1);
   // console.log(datas);
 
-  const datas = arr1.map(item=>{
-    return `<li>${item}</li>`;
-  })
-  console.log(arr1);
+  // const datas = arr1.map(item=>{
+  //   return `<li>${item}</li>`;
+  // })
+  // console.log(arr1);
+  // console.log(datas);
+  // myUl.innerHTML = datas.join("");  //array > string
+
+  let datas = '[{},{},{}]';
+  console.log(datas[0]); // {} or [
+  datas = JSON.parse(datas)
+  console.log(datas[0]);
+  datas = JSON.stringify(datas);
   console.log(datas);
-  myUl.innerHTML = datas.join("");  //array > string
-  
+
+  //瀏覽器端   JSON.stringify([{},{},{}])  >  要傳送到伺服器端
+
+  //伺服器端  "[{},{},{}]" > 傳送到瀏覽器端 > 收到的資料是 JSON物件還是JSON字串  JSON.parse("[{},{},{}]")
+
+  //例外處理
+  try{
+    //串接api
+    //fetch('api url')
+    //有可能發生錯誤的程式
+    //本來是沒問題
+    console.log(datas.name.firstName);
+    //因為某種原因出現了錯誤
+  }catch(error){
+    //真的錯誤發生會執行這裡的程式碼
+    console.log(error.stack);
+    console.log(error.message);
+  }finally{
+   console.log("finally");
+  }
+
+
+console.log("aaaaaaaaa");
 
 
   </script>
