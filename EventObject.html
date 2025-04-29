@@ -4,17 +4,92 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <style>
+    .s1{
+      width:200px;
+      height:200px;
+      background-color: silver;
+      position: absolute;
+      top:100px;
+      left:300px;
+    }
+  </style>
 </head>
 <body>
-  <select id="select1">
-    <option value="1">Item1</option>
-    <option value="2">Item2</option>
-    <option value="3">Item3</option>
-    <option value="3">Item4</option>
-  </select>
+  <form name="registerForm" action="get.php">
+    <input type="text" placeholder="姓名" name="account" value="guest" />
+    <input type="email" placeholder="電子郵件" name="mail" />
+    <select id="select1" name="skill">
+      <option value="1">Item1</option>
+      <option value="2">Item2</option>
+      <option value="3">Item3</option>
+      <option value="3">Item4</option>
+    </select>
+    <input type="submit" value="送出" />
+    <input type="reset" value="清除" />
+    <input type="button" value="Click" />
+    <button type="button">Submit</button>
+  </form>
+
+  <div class="s1"></div>
+
+
 
   <script>
+    //找到網頁上要控制的標籤
     const mySelect = document.querySelector('#select1');
+    const myForm = document.querySelector('form[name="registerForm"]'); //querySelectorAll('css selectors')
+    const txtAccount = document.querySelector('input[name="account"]'); 
+    const myDiv = document.querySelector('.s1'); 
+
+    myDiv.addEventListener('mousedown',event=>{      
+      console.log(event) 
+      //button屬性 0 左鍵、2 右鍵、1 滾輪 
+      if(event.button === 2){
+        alert('右鍵')
+      }
+      //滑鼠點選的座標
+      console.log(`screenX：${event.screenX}, screenY：${event.screenY}`); //螢幕的左上角(0,0)
+      console.log(`clientX：${event.clientX}, clientY：${event.clientY}`); //瀏覽器的左上角(0,0)
+      console.log(`offsetX：${event.offsetX}, offsetY：${event.offsetY}`); //事件對象的左上角(0,0)
+    })
+    
+    myDiv.addEventListener('mousemove',event=>{      
+    
+      //滑鼠點選的座標   
+      console.log(`offsetX：${event.offsetX}, offsetY：${event.offsetY}`); //事件對象的左上角(0,0)
+    })
+
+    txtAccount.addEventListener('keyup',event=>{
+        console.log(event);
+        console.log(event.target); //<input>
+        console.log(event.type); //keydown
+        console.log(event.target.value); 
+        //鍵盤事件keyup
+        //which、keycode取得使用者是按下按鍵的Unicode  ，Enter > 13  Space > 32 Ctrl > 17
+        //key 取得使用者是按下按鍵的名稱
+        if(event.which === 13){
+          alert('enter');
+        }
+    })
+
+    txtAccount.addEventListener('focus', event=>{
+      console.log(event.type);
+    })
+    txtAccount.addEventListener('blur', event=>{
+      console.log(event.type);
+    })
+    // txtAccount.addEventListener('input', event=>{
+    //   console.log(event.type);
+    // })
+
+     myForm.addEventListener('submit',event=>{
+        event.preventDefault(); //停止預設行為，本來會有submit行為的透過preventDefault取消
+        console.log(event);
+        console.log(event.target); //<form>
+        console.log(event.type); //submit
+     })
+
     mySelect.addEventListener('change', event =>{
       //事件處理函式的第一個參數就是事件物件，例如event就是一個事件物件
        console.log(event); //事件物件有哪些屬性
@@ -22,6 +97,8 @@
        console.log(event.type);  //事件類型  change
        console.log(event.target.value); //讀取被選取的value的值
     })
+
+
 
   </script>
 </body>
