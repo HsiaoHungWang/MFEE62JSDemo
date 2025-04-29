@@ -25,12 +25,14 @@
       <option value="3">Item3</option>
       <option value="3">Item4</option>
     </select>
+    <textarea></textarea>
     <input type="submit" value="送出" />
     <input type="reset" value="清除" />
     <input type="button" value="Click" />
     <button type="button">Submit</button>
   </form>
-
+<hr />
+<a href="https://www.ispan.com.tw" id="a1">iSpan</a>
   <div class="s1"></div>
 
 
@@ -41,6 +43,13 @@
     const myForm = document.querySelector('form[name="registerForm"]'); //querySelectorAll('css selectors')
     const txtAccount = document.querySelector('input[name="account"]'); 
     const myDiv = document.querySelector('.s1'); 
+
+    document.querySelector('#a1').addEventListener('click',event=>{
+      if(!window.confirm("安全不保證?")){
+        event.preventDefault(); //停止預設行為，本來會有連結行為的透過preventDefault取消
+      }
+   
+    })
 
     myDiv.addEventListener('mousedown',event=>{      
       console.log(event) 
