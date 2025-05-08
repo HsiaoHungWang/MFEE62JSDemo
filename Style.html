@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .s1{
+      background-color: silver;
+      padding:10px;
+      width:300px;  
+      /* font-size:24px; */
+    }
+    .s2{
+      border-radius: 10px;
+    }
+
+    .s3{
+      color:red;
+      
+    }
+  </style>
+</head>
+<body>
+  <button id="buttonPlus">A+</button>
+  <button id="buttonMinus">A-</button>
+  <h2 id="theH" class="s1" style="font-size:24px">Hello World!!</h2>
+
+
+  <script>
+    const myH = document.querySelector('#theH');
+    const btnPlus = document.querySelector('#buttonPlus');
+    const btnMinus = document.querySelector('#buttonMinus');
+    btnMinus.addEventListener('click',event=>{
+   //   console.log( myH.style.fontSize);
+     myH.style.fontSize = parseInt(myH.style.fontSize) - 2 + 'px'
+    })
+    btnPlus.addEventListener('click',event=>{
+     // console.log( myH.style.fontSize);
+     myH.style.fontSize = parseInt(myH.style.fontSize) + 2 + 'px'
+    })
+    myH.addEventListener('mouseover',event=>{
+      myH.classList.add('s2');
+    })
+    myH.addEventListener('mouseout',event=>{
+      myH.classList.remove('s2');
+    })
+    myH.addEventListener('click',event=>{
+      // if(myH.classList.contains('s3')){
+      //   myH.classList.remove('s3');
+      // }else{
+      //   myH.classList.add('s3');
+      // }
+      myH.classList.toggle('s3');
+    })
+  </script>
+</body>
+</html>
