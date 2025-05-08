@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form id="registerForm" action="get.php" novalidate>
+    <input type="email" required placeholder="請輸入電子郵件" name="email">
+    <button>註冊</button>
+  </form>
+
+  <script src="scripts//vaidate.js"></script>
+  <script>
+   const regForm = document.querySelector('#registerForm');
+   const inpMail = document.querySelector('input[name="email"]');
+
+   regForm.addEventListener('submit',event=>{
+       event.preventDefault();
+
+       let isValid = false;
+
+       //驗證程式
+       const theMail = inpMail.value;
+       const emailEmptyCheck = checkEmpty(theMail);
+       if(!emailEmptyCheck){
+          alert("請輸入電子郵件")
+       }
+       const emailFormatCheck = checkMailFormat(theMail);
+       if(!emailFormatCheck){
+          alert("電子郵件格式不正確")
+       }
+       if(emailEmptyCheck && emailFormatCheck){
+          isValid = true;
+       }
+
+       if(isValid){
+        regForm.submit();
+       }
+   })
+  </script>
+</body>
+</html>
