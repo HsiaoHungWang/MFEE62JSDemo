@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button id="button1">開始</button>
+  <div id="div1">00:00:00</div>
+
+  <script>
+    const btn = document.querySelector('#button1');
+    const divClock = document.querySelector('#div1');
+    let t;
+    btn.addEventListener('click',event=>{
+      //  window.setTimeout(()=>{
+      //   console.log("1");
+      //  },1000);
+      if(btn.textContent === "開始"){
+        btn.textContent = "停止"
+        t = window.setInterval(startClock, 1000);
+      }else{
+         btn.textContent = "開始"
+         //停止計時
+         window.clearInterval(t);
+      }
+
+     
+    })
+
+    const startClock = ()=>{
+      //要如何取得時分秒
+      const today = new Date();
+      const hour = today.getHours().toString().padStart("2","0");
+      const min = today.getMinutes().toString().padStart("2","0");
+      const sec = today.getSeconds().toString().padStart("2","0");
+      divClock.textContent = `${hour}:${min}:${sec}`;
+    }
+
+  </script>
+</body>
+</html>
